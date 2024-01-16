@@ -1,0 +1,68 @@
+/* El div de esta clase es el que contiene el cuadro*/
+.canvas {
+    width: 500px;
+    height: 600px;
+    background-color: #4d0f00;
+    /* Esta línea significa que cualquier contenido que se desborde del elemento (es decir, que sea más grande que las dimensiones especificadas de 500px por 600px) será ocultado y no se mostrará.*/
+    overflow: hidden;
+    /*  aplica un efecto de desenfoque al elemento, con un radio de desenfoque de 2 píxeles, de forma que el contenido aparecerá “borroso”.*/
+    filter: blur(2px);
+  }
+  
+  /* en el modelo de cajas, width se refiere al contenido; el ancho total es eso + los bordes + el relleno (padding); lo mismo para el alto
+  en este caso: ancho = 50 + 50 + 500 + 50 + 50 = 700px
+                alto = (lo determina el canvas) + padding top + padding bottom + border top + border bottom
+  */
+  .frame {
+    border: 50px solid black;
+    width: 500px;
+    padding: 50px;
+    margin: 20px auto;
+  }
+  
+  .one {
+    width: 425px;
+    height: 150px;
+    background-color: #efb762;
+    margin: 20px auto;
+    /* es una pijada, nos da un poco igual. Bing chat nos los explica: 
+    La propiedad box-shadow en CSS se utiliza para aplicar efectos de sombra a los elementos. 
+    La línea de código box-shadow: 0 0 3px 3px #efb762; se descompone de la siguiente manera:
+      0: desplazamiento horizontal de la sombra. 
+      0: desplazamiento vertical de la sombra. 
+      3px: radio de desenfoque de la sombra.
+      3px: radio de expansión de la sombra más allá de las dimensiones de la caja.
+      #efb762: Este es el color de la sombra. #efb762 es un color hexadecimal.
+    */
+    box-shadow: 0 0 3px 3px #efb762;
+    /* La propiedad border-radius en CSS se utiliza para redondear las esquinas de un elemento. 
+      Si no hay ninguna propiedad border definida en ese mismo elemento, border-radius todavía puede tener un efecto visual si el elemento tiene un fondo (background-color o background-image) porque border-radius también afecta al fondo del elemento.*/
+    border-radius: 9px;
+    /* La línea de código transform: rotate(-0.6deg); significa que el elemento se rotará -0.6 grados en sentido horario. Aquí, el valor -0.6deg es el ángulo de rotación. Un valor negativo indica una rotación en sentido horario, mientras que un valor positivo indica una rotación en sentido antihorario.*/
+    transform: rotate(-0.6deg);
+  }
+  
+  .two {
+    width: 475px;
+    height: 200px;
+    background-color: #8f0401;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 3px 3px #8f0401;
+    border-radius: 8px 10px;
+    transform: rotate(0.4deg);
+  }
+  
+  .one, .two {
+    
+    filter: blur(1px);
+  }
+  
+  .three {
+    width: 91%;
+    height: 28%;
+    background-color: #b20403;
+    margin: auto;
+    filter: blur(2px);
+    box-shadow: 0 0 5px 5px #b20403;
+    border-radius: 30px 25px 60px 12px;
+  }
